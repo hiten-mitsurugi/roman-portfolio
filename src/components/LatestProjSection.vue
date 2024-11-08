@@ -69,7 +69,7 @@ const Projects = ref([
     {
         id: 1,
         category: 'Web development',
-        image: '/src/assets/project.png',
+        image: new URL('@/assets/project.png', import.meta.url).href,
         title: 'E-Commerce Platform',
         description: 'This project focuses on creating an e-commerce app where users can browse, add products to their cart, and proceed to checkout. The app includes features like product search, filters, and payment integration.',
         technologies: ['React', 'Tailwind CSS', 'Express', 'MongoDB'],
@@ -79,7 +79,7 @@ const Projects = ref([
     {
         id: 2,
         category: 'Web development',
-        image: '/src/assets/project.png',
+        image: new URL('@/assets/project.png', import.meta.url).href,
         title: 'Event Management System',
         description: 'This project is designed to help users create, manage, and book events. It includes a calendar for scheduling, RSVP functionalities, and automated reminders.',
         technologies: ['Angular', 'Bootstrap', 'Django', 'PostgreSQL'],
@@ -89,7 +89,7 @@ const Projects = ref([
     {
         id: 3,
         category: 'Web development',
-        image: '/src/assets/project.png',
+        image: new URL('@/assets/project.png', import.meta.url).href,
         title: 'Social Media Dashboard',
         description: 'This project involves building a dashboard that connects with social media APIs to monitor engagement metrics, trends, and performance for different accounts.',
         technologies: ['Vue.js', 'Vuetify', 'Flask', 'MySQL'],
@@ -99,7 +99,7 @@ const Projects = ref([
     {
         id: 4,
         category: 'Mobile App',
-        image: '/src/assets/mobile.jpg',
+        image: new URL('@/assets/mobile.jpg', import.meta.url).href,
         title: 'Fitness Tracker',
         description: 'This project aims to help users track their workouts and fitness goals. It can include features like calorie tracking, exercise logging, and personalized workout plans.',
         technologies: ['React Native', 'Firebase'],
@@ -109,7 +109,7 @@ const Projects = ref([
     {
         id: 5,
         category: 'Mobile App',
-        image: '/src/assets/mobile.jpg',
+        image: new URL('@/assets/mobile.jpg', import.meta.url).href,
         title: 'Expense Tracker',
         description: 'A personal finance app that allows users to log expenses, categorize spending, and set budgets. It can show insights into spending trends and help with saving.',
         technologies: ['Flutter', 'Node.js', 'SQLite'],
@@ -119,7 +119,7 @@ const Projects = ref([
     {
         id: 6,
         category: 'Mobile App',
-        image: '/src/assets/mobile.jpg',
+        image: new URL('@/assets/mobile.jpg', import.meta.url).href,
         title: 'Recipe Finder',
         description: 'This app allows users to search for recipes based on ingredients or cuisine preferences. It also allows users to save favorite recipes and create a grocery list based on ingredients needed.',
         technologies: ['Swift (iOS)', 'Kotlin (Android)', 'Firebase'],
@@ -127,6 +127,7 @@ const Projects = ref([
         webURL: 'https://github.com/deepakdawade/Recipe-Finder'
     }
 ]);
+
 
 const selectedCategory = ref('all');
 const filteredProjects = computed(() => {

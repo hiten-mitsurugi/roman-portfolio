@@ -41,9 +41,9 @@
                                     </svg>
                                     <div class="download-loader text-white hidden"></div>
                                 </div>
-                                <a href="/src/assets/Roman-Resume.pdf" download="resume.pdf"
-                                    class="pl-2 text-primary">Download
-                                    resume</a>
+                                <a :href="resumePdf" download="Roman-Resume.pdf" class="pl-2 text-primary">
+                                    Download resume
+                                </a>
                             </div>
                         </button>
                     </div>
@@ -64,11 +64,12 @@
             </div>
         </div>
     </section>
-
 </template>
 
 <script setup>
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import resumePdf from '@/assets/Roman-Resume.pdf'; // Import the PDF file
+
 AOS.init();
 </script>
